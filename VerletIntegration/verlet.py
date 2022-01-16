@@ -1,8 +1,5 @@
-from random import shuffle
-
 import pyglet
 from fishpy.geometry import ORIGIN_2D, LineSegment, Point2D
-from fishpy.utility.debug import profile
 from pyglet.window import mouse
 
 from config import CONFIG, FPS, SQUISH_ITERATIONS, WINDOW_SIZE
@@ -25,7 +22,6 @@ sticks: list[Stick] = [
           points[s['p2']],
           visible=s.get('visible', True),
           graphics_batch=batch) for s in CONFIG['sticks']]
-# shuffle(sticks)
 
 
 @window.event
