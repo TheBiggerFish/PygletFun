@@ -1,0 +1,49 @@
+constants:
+  WINDOW_SIZE: 
+    x: 1600
+    y: 800
+  VISIBLE_POINTS: True
+  DEFAULT_POINT_RADIUS: 1
+  SQUISH_ITERATIONS: 3
+
+points:
+  p_1:
+    x: 200
+    y: 700
+    static: False
+    initial_velocity:
+      x: 
+        random:
+          low: 25
+          high: 75
+      y:
+        random:
+          low: -50
+          high: 0
+  p_2: 
+    x: 200
+    y: 600
+  p_3: 
+    x: 100
+    y: 600
+  p_4: 
+    x: 100
+    y: 700
+
+sticks: 
+  - p1: p_1
+    p2: p_2
+
+  - p1: p_2
+    p2: p_3
+
+  - p1: p_3
+    p2: p_4
+
+  - p1: p_4
+    p2: p_1
+
+  - p1: p_1
+    p2: p_3
+    visible: False
+  
